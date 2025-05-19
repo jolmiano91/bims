@@ -1,0 +1,185 @@
+/* login.css */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #91bdf3, #a18cd1);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    position: relative;
+}
+
+form {
+    background-color: #ffffff;
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15),
+                0 0 15px rgba(109, 73, 193, 0.4);
+    text-align: center;
+    animation: bounce 1.5s ease-in-out infinite alternate, glow 2s ease-in-out infinite;
+    position: relative;
+    z-index: 1;
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 10px rgba(109, 73, 193, 0.4),
+                    0 0 20px rgba(109, 73, 193, 0.2);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(109, 73, 193, 0.7),
+                    0 0 30px rgba(109, 73, 193, 0.5);
+    }
+    100% {
+        box-shadow: 0 0 10px rgba(109, 73, 193, 0.4),
+                    0 0 20px rgba(109, 73, 193, 0.2);
+    }
+}
+
+h2 {
+    margin-bottom: 30px;
+    color: #2e125b;
+    font-size: 28px;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 15px 40px 15px 15px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    font-size: 16px;
+    outline: none;
+    transition: box-shadow 0.3s, border-color 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #6d49c1;
+    box-shadow: 0 0 5px rgba(109, 73, 193, 0.6);
+}
+
+.input-group .icon {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #888;
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.options a {
+    text-decoration: none;
+    color: #6d49c1;
+}
+
+.options a:hover {
+    text-decoration: underline;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    background-color: #6d49c1;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #4431a3;
+    box-shadow: 0 0 10px rgba(68, 49, 163, 0.6);
+}
+
+.register-link {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.register-link a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
+
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-8px); }
+}
+
+@media (max-width: 500px) {
+    form {
+        padding: 30px 20px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+}
+
+/* Glowing Front Page Button */
+.user-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    border: none;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 8px rgba(76, 175, 80, 0.5);
+    animation: button-glow 2s infinite ease-in-out alternate;
+    display: inline-block;
+}
+
+.user-button:hover {
+    background-color: #45a049;
+    box-shadow: 0 0 12px rgba(76, 175, 80, 0.8),
+                0 0 20px rgba(76, 175, 80, 0.6);
+}
+
+@keyframes button-glow {
+    0% {
+        box-shadow: 0 0 8px rgba(76, 175, 80, 0.4);
+    }
+    100% {
+        box-shadow: 0 0 16px rgba(76, 175, 80, 0.8);
+    }
+}
+.top-right-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 999;
+}
+
